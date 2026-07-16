@@ -621,10 +621,10 @@
         <div class="booking" id="booking" style="display:none">
           <div class="booking-in">
             <div>
-              <div class="booking-title">Cần giải pháp tư vấn chuyên sâu dựa trên kết quả khảo sát này?</div>
-              <div class="booking-sub">Ban cố vấn chuyên môn của Upzi sẵn sàng đồng hành cùng Doanh nghiệp để phân tích sâu hơn về EVP và lộ trình tối ưu thương hiệu tuyển dụng cho nhóm ứng viên Gen Z.</div>
+              <div class="booking-title">Cần tư vấn thêm dựa trên kết quả khảo sát này?</div>
+              <div class="booking-sub">Anh/Chị lưu lại kết quả khảo sát, Team Upzi sẵn sàng đồng hành cùng Doanh nghiệp để phân tích sâu hơn và tối ưu thương hiệu tuyển dụng cho nhóm ứng viên Gen Z.</div>
             </div>
-            <a class="btn-book" id="btn-book" href="https://upzi-schedule.sfsite.me" target="_blank" rel="noopener">Đăng ký tham vấn chuyên sâu →</a>
+            <a class="btn-book" id="btn-book" href="https://upzi-schedule.sfsite.me" target="_blank" rel="noopener">Đăng ký tư vấn →</a>
           </div>
         </div>
       </div>
@@ -824,7 +824,7 @@ function buildReading() {
   const weak = DIMS.filter(d => dimScore(d).sum <= 2).map(d => d.name);
   const mid = DIMS.filter(d => { const s = dimScore(d).sum; return s >= 3 && s <= 4 }).map(d => d.name);
   const strong = DIMS.filter(d => dimScore(d).sum >= 5).map(d => d.name);
-  let h = '<h3>Nhận định chuyên môn - Đánh giá cấu trúc Đề xuất giá trị tuyển dụng (EVP)</h3>';
+  let h = '<h3>Đánh giá</h3>';
   if (weak.length) h += `<p><strong>⚠️ Khoảng trống thông tin (≤ 2 điểm): ${weak.join(', ')}.</strong> Doanh nghiệp hiện chưa truyền tải đầy đủ các giá trị thuộc nhóm này trên hành trình trải nghiệm tuyển dụng. Trong bối cảnh ứng viên trẻ ngày càng chủ động nghiên cứu doanh nghiệp trước khi quyết định ứng tuyển, đây có thể trở thành một rào cản khiến tỷ lệ cân nhắc nộp hồ sơ giảm xuống.</p>`;
   if (mid.length) h += `<p><strong>⚡ Đã đề cập nhưng thiếu tính thuyết phục (3–4 điểm): ${mid.join(', ')}.</strong> Thông điệp tuyển dụng hiện vẫn thiên về mô tả, chưa có nhiều minh chứng thực tế để tăng sức thuyết phục. Doanh nghiệp nên bổ sung các yếu tố như số liệu cụ thể, hình ảnh trực quan hoặc trải nghiệm thực tế từ nhân viên, thay vì chỉ truyền tải bằng những nội dung mang tính mô tả.</p>`;
   if (strong.length) h += `<p><strong>✨ Lợi thế cạnh tranh vượt trội (5–6 điểm): ${strong.join(', ')}.</strong> Đây là những giá trị cốt lõi mà Doanh nghiệp đã truyền tải rõ ràng và nhất quán. Để phát huy hiệu quả, Anh/Chị nên ưu tiên đặt các thông điệp này tại những điểm chạm quan trọng như tiêu đề, phần mở đầu của JD hoặc các nội dung nổi bật trong chiến dịch Employer Branding, từ đó gia tăng tỷ lệ chuyển đổi ứng viên chất lượng.</p>`;
